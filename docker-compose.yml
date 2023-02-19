@@ -1,7 +1,7 @@
 version: '3.0'
 services:
   web:
-    build: .
+    image: nugrohop2003/blogx:${GIT_COMMIT_SHORT}
     ports:
       - 8000:8000
     volumes:
