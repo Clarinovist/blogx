@@ -2,7 +2,6 @@ FROM debian:buster
 
 RUN apt update
 RUN apt install -y curl wget unzip nano
-COPY . /blogx
 WORKDIR /blogx
 
 RUN apt install -y gnupg2 ca-certificates apt-transport-https software-properties-common
@@ -13,6 +12,8 @@ RUN apt update
 RUN apt install -y php8.0 php8.0-mysql php8.0-xml php8.0-curl php8.0-mbstring php8.0-zip php8.0-cli
 RUN wget -O composer-setup.php https://getcomposer.org/installer
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+COPY . /blogx
 RUN composer install
 
 COPY .env.example .env
