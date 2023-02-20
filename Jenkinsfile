@@ -14,6 +14,7 @@ pipeline {
 
    stage('Build blogx') {
      steps {
+         sh 'whoami'
          sh 'docker build . -t blogx:$GIT_COMMIT_SHORT'
          sh 'docker tag blogx:$GIT_COMMIT_SHORT nugrohop2003/blogx:$GIT_COMMIT_SHORT'
          sh 'docker push nugrohop2003/blogx:$GIT_COMMIT_SHORT'
