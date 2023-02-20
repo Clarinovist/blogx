@@ -14,11 +14,9 @@ pipeline {
 
    stage('Build blogx') {
      steps {
-       dir('blogx') {
          sh 'docker build . -t blogx:$GIT_COMMIT_SHORT'
          sh 'docker tag blogx:$GIT_COMMIT_SHORT nugrohop2003/blogx:$GIT_COMMIT_SHORT'
          sh 'docker push nugrohop2003/blogx:$GIT_COMMIT_SHORT'
-       }
      }
    }
 
