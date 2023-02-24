@@ -11,7 +11,7 @@
 
 Blog? Bukan. Ini BlogX. Sebuah aplikasi yang dibuat menggunakan [Laravel](https://laravel.com) untuk membuat blog. 
 
-Jadi BlogX itu apa? 
+Jadi BlogX itu apa? blogx adalah website untuk membuat blog
 
 Ya BlogX itu BlogX
 
